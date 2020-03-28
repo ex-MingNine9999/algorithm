@@ -1,4 +1,8 @@
-mport java.io.*;
+//Problem Number : 17182
+//Problem Title : 우주 탐사선
+//Problem Link : https://www.acmicpc.net/problem/17182
+
+import java.io.*;
 import java.util.*;
 
 public class Main {
