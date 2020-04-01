@@ -3,9 +3,6 @@
 //Problem Link : https://www.acmicpc.net/problem/1000
 
 #include <cstdio>
-#include <algorithm>
-
-using namespace std;
 
 int main(void)
 {
