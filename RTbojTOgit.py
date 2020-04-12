@@ -17,8 +17,10 @@ codePath = ("/Users/ming._.nine9/CLionProjects/BOJ/main.cpp", "/Users/ming._.nin
 
 add = "git add "
 commit = "git commit -m "
+pull = "git pull"
 push = "git push"
 
+os.system("/Applications/CLion.app/Contents/MacOS/clion")
 os.chdir(newCodePath)
 
 fname = ""
@@ -28,6 +30,7 @@ while True :
     if com == "exit" :
         exit()
     elif com == "p" :
+        os.system(pull)
         os.system(push)
         continue
     elif com == "d" :
