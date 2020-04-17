@@ -20,7 +20,7 @@ commit = "git commit -m "
 pull = "git pull"
 push = "git push"
 
-os.system("/Applications/CLion.app/Contents/MacOS/clion")
+os.popen("/Applications/CLion.app/Contents/MacOS/clion")
 os.chdir(newCodePath)
 
 fname = ""
