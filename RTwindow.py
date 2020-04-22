@@ -71,7 +71,8 @@ while True :
                     break
 
             probNum = solNum.findAll("td")[2].text
-            probTitle = str(solNum.findAll("td")[2].find("a").get("data-original-title"))
+            probTitle = str(solNum.findAll("td")[2].find("a").get("title"))
+            print("!!!!\n" + probTitle)
             pl = solNum.findAll("td")[6].text
 
             fname = "boj" + probNum
@@ -101,8 +102,8 @@ while True :
             codeFile.close()
             newFile.close()
 
-            os.system(add + fname)
-            os.system(commit + "Solutions")
+            #os.system(add + fname)
+            #os.system(commit + "Solutions")
 
             print("\nComplete to commit " + fname + "!!!\n")
             break
