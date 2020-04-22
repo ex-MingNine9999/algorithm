@@ -1,5 +1,5 @@
 //Problem Number : 1816
-//Problem Title : 암호 키
+//Problem Title : 암호 키 
 //Problem Link : https://www.acmicpc.net/problem/1816
 
 #include <iostream>
