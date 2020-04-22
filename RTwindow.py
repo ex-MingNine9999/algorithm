@@ -13,7 +13,7 @@ URL = "https://www.acmicpc.net/status?problem_id=&user_id=" + ID + "&language_id
 
 PL = ("C++", "C", "Java", "Python")
 fileEx = (".cpp", ".c", ".java", ".py")
-codePath = ("C:/Users/alsrn/source/repos/BOJ/BOJ/", "c/Users/alsrn/source/repos/BOJ/BOJ/", "c/Users/alsrn/source/repos/BOJ/BOJ/", "c/Users/alsrn/source/repos/pyBOJ/pyBOJ/")
+codePath = ("C:\\Users\\alsrn\\source\\repos\\BOJ\\BOJ\\", "C:\\Users\\alsrn\\source\\repos\\BOJ\\BOJ\\", "C:\\Users\\alsrn\\source\\repos\\BOJ\\BOJ\\", "C:\\Users\\alsrn\\source\\repos\\pyBOJ\\pyBOJ\\")
 
 add = "git add "
 commit = "git commit -m "
@@ -23,6 +23,7 @@ push = "git push"
 os.chdir(newCodePath)
 
 fname = ""
+lastIdx = 0
 
 while True :
     com = input()
@@ -39,7 +40,8 @@ while True :
         while True :
             com = input(fname + " is  deleted. Y/N ")
             if com == "Y" or com == "y" :
-                os.system("rm " + fname)
+                os.system("del " + codePath[lastIdx] + fname)
+                print("removed the fname in BOJ\n")
                 fname = ""
                 break
             elif com == "N" or com == "n" :
@@ -77,6 +79,7 @@ while True :
                     fname = fname + fileEx[idx]
                     try :
                         codeFile = open(codePath[idx] + fname, "r")
+                        lastIdx = idx
                     except :
                         print("File doesn't exist")
                         fname = ""
@@ -97,7 +100,8 @@ while True :
             codeFile.close()
             newFile.close()
 
-            print(fname)
             os.system(add + fname)
             os.system(commit + "Solutions")
+
+            print("Complete to commit " + fname + "!!!\n")
             break
