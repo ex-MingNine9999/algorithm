@@ -59,7 +59,7 @@ int find(int v)
 }
 
 bool unionSet(int a, int b)
-{	
+{
 	int aa = find(a);
 	int bb = find(b);
 
@@ -75,7 +75,7 @@ int kruscal(int c)
 {
 	int ret = 0;
 	bridge t;
-	
+
 	while (!pq.empty()) {
 		t = pq.top();
 		pq.pop();
@@ -93,7 +93,7 @@ int kruscal(int c)
 	if (c != 1) {
 		return -1;
 	}
-	
+
 	return ret;
 }
 
@@ -138,7 +138,7 @@ int main(void)
 					y = i + goY[k];
 					x = j + goX[k];
 					int len = 0;
-					
+
 					while (MAP[y][x] == 0) {
 						y += goY[k];
 						x += goX[k];
