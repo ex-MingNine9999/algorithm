@@ -1,5 +1,5 @@
 //Problem Number : 17471
-//Problem Title : None
+//Problem Title : 게리맨더링
 //Problem Link : https://www.acmicpc.net/problem/17471
 
 #include <iostream>
