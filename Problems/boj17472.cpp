@@ -163,14 +163,5 @@ int main(void)
 
 	cout << kruscal(c) << endl << endl;
 
-	for (int i = 1; i <= n; i++, cout << endl)
-		for (int j = 1; j <= m; j++)
-			cout << MAP[i][j] << ' ';
-
-	for (int i = 1; i <= c; i++, cout << endl)
-		for (int j = 1; j <= c; j++)
-			cout << b[i][j] << ' ';
-
-
 	return 0;
 }
