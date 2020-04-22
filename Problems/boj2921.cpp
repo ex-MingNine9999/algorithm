@@ -1,5 +1,5 @@
 //Problem Number : 2921
-//Problem Title : 도미노
+//Problem Title : 도미노 
 //Problem Link : https://www.acmicpc.net/problem/2921
 
 #include <iostream>
