@@ -1,5 +1,5 @@
 //Problem Number : 17472
-//Problem Title : 다리 만들기 2
+//Problem Title : 다리 만들기 2 
 //Problem Link : https://www.acmicpc.net/problem/17472
 
 #include <iostream>
