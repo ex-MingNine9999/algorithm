@@ -32,6 +32,7 @@ while True :
     elif com == "p" :
         os.system(pull)
         os.system(push)
+        print("\n");
         continue
     elif com == "d" :
         if fname == "" :
@@ -41,7 +42,7 @@ while True :
             com = input(fname + " is  deleted. Y/N ")
             if com == "Y" or com == "y" :
                 os.system("del " + codePath[lastIdx] + fname)
-                print("removed the fname in BOJ\n")
+                print("removed the " + fname + " in BOJ\n")
                 fname = ""
                 break
             elif com == "N" or com == "n" :
@@ -103,5 +104,5 @@ while True :
             os.system(add + fname)
             os.system(commit + "Solutions")
 
-            print("Complete to commit " + fname + "!!!\n")
+            print("\nComplete to commit " + fname + "!!!\n")
             break
