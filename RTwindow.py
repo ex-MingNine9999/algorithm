@@ -13,7 +13,7 @@ URL = "https://www.acmicpc.net/status?problem_id=&user_id=" + ID + "&language_id
 
 PL = ("C++", "C", "Java", "Python")
 fileEx = (".cpp", ".c", ".java", ".py")
-codePath = ("C:/Users/alsrn/source/repos/BOJ/BOJ/", "c/Users/alsrn/source/repos/BOJ/BOJ/", "c/Users/alsrn/source/repos/BOJ/BOJ/", "c/Users/alsrn/source/repos/pyBOJ/pyBOJ/")
+codePath = ("C:\\Users\\alsrn\\source\\repos\\BOJ\\BOJ\\", "C:\\Users\\alsrn\\source\\repos\\BOJ\\BOJ\\", "C:\\Users\\alsrn\\source\\repos\\BOJ\\BOJ\\", "C:\\Users\\alsrn\\source\\repos\\pyBOJ\\pyBOJ\\")
 
 add = "git add "
 commit = "git commit -m "
@@ -23,6 +23,7 @@ push = "git push"
 os.chdir(newCodePath)
 
 fname = ""
+lastIdx = 0
 
 while True :
     com = input()
@@ -31,6 +32,7 @@ while True :
     elif com == "p" :
         os.system(pull)
         os.system(push)
+        print("\n");
         continue
     elif com == "d" :
         if fname == "" :
@@ -39,7 +41,8 @@ while True :
         while True :
             com = input(fname + " is  deleted. Y/N ")
             if com == "Y" or com == "y" :
-                os.system("rm " + fname)
+                os.system("del " + codePath[lastIdx] + fname)
+                print("removed the " + fname + " in BOJ\n")
                 fname = ""
                 break
             elif com == "N" or com == "n" :
@@ -68,7 +71,7 @@ while True :
                     break
 
             probNum = solNum.findAll("td")[2].text
-            probTitle = str(solNum.findAll("td")[2].find("a").get("data-original-title"))
+            probTitle = str(solNum.findAll("td")[2].find("a").get("title"))
             pl = solNum.findAll("td")[6].text
 
             fname = "boj" + probNum
@@ -77,6 +80,7 @@ while True :
                     fname = fname + fileEx[idx]
                     try :
                         codeFile = open(codePath[idx] + fname, "r")
+                        lastIdx = idx
                     except :
                         print("File doesn't exist")
                         fname = ""
@@ -89,6 +93,10 @@ while True :
             code = codeFile.read()
             newFile = open(newCodePath + fname, "w")
 
+            comment = "//"
+            if lastIdx == 3 :
+                comment = "#"
+
             newFile.write("//Problem Number : " + probNum + "\n")
             newFile.write("//Problem Title : " + probTitle + "\n")
             newFile.write("//Problem Link : " + mainURL + "problem/" + probNum + "\n\n")
@@ -97,7 +105,8 @@ while True :
             codeFile.close()
             newFile.close()
 
-            print(fname)
             os.system(add + fname)
             os.system(commit + "Solutions")
+
+            print("\nComplete to commit " + fname + "!!!\n")
             break

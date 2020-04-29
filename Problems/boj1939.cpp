@@ -1,5 +1,5 @@
 //Problem Number : 1939
-//Problem Title : None
+//Problem Title : 중량제한 
 //Problem Link : https://www.acmicpc.net/problem/1939
 
 #include <iostream>

@@ -1,5 +1,5 @@
 //Problem Number : 1072
-//Problem Title : None
+//Problem Title : 게임
 //Problem Link : https://www.acmicpc.net/problem/1072
 
 #include <iostream>

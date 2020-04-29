@@ -1,5 +1,5 @@
 //Problem Number : 2647
-//Problem Title : None
+//Problem Title : 검은점과 하얀점 연결 
 //Problem Link : https://www.acmicpc.net/problem/2647
 
 #include <iostream>

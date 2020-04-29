@@ -1,5 +1,5 @@
 //Problem Number : 6209
-//Problem Title : None
+//Problem Title : 제자리 멀리뛰기 
 //Problem Link : https://www.acmicpc.net/problem/6209
 
 #include <iostream>
