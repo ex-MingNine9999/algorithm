@@ -1,5 +1,5 @@
 //Problem Number : 1072
-//Problem Title : °ÔÀÓ
+//Problem Title : ê²Œìž„
 //Problem Link : https://www.acmicpc.net/problem/1072
 
 #include <iostream>
