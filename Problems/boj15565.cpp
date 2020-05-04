@@ -40,7 +40,12 @@ int main(void)
 		}
 	}
 
-	cout << MIN;
+	if (MIN >= (int)1e6 + 1) {
+		cout << -1;
+	}
+	else {
+		cout << MIN;
+	}
 
 	return 0;
 }
