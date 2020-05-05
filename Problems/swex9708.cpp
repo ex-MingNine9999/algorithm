@@ -1,3 +1,7 @@
+//Problem Number : 9708
+//Problem Title : 가장 긴 수열
+//Problem Link : https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AXDNGXlKagUDFAVX&categoryId=AXDNGXlKagUDFAVX&categoryType=CODE
+
 #include <iostream>
 #include <algorithm>
 
