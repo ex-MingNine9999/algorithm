@@ -5,7 +5,7 @@ import time
 import subprocess
 
 ID = input("your BOJ handle : ")
-os.popen("C:/Users/alsrn/source/repos/BOJ/BOJ.sln")
+VS = subprocess.Popen("C:/Users/alsrn/source/repos/BOJ/BOJ.sln", shell = True, stdout = subprocess.PIPE)
 
 newCodePath = "C:/Users/alsrn/source/algorithm/Problems/"
 mainURL = "https://www.acmicpc.net/"
@@ -28,6 +28,7 @@ lastIdx = 0
 while True :
     com = input()
     if com == "exit" :
+        VS.kill()
         exit()
     elif com == "p" :
         os.system(pull)
