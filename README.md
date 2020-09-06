@@ -1,5 +1,5 @@
 # MingNine Algorithm Practice Note
-
+> https://mingnine9999.tistory.com/
 
 ## Problems 
 - 백준에서 ac를 받은 문제들
